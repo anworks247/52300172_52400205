@@ -1,8 +1,5 @@
 # Triển khai ứng dụng web (Deployment of Web Applications)
 
-## Hướng dẫn demo và cài đặt dự án
-
-README này là tài liệu kỹ thuật dành cho người chấm bài. Tài liệu nêu các yêu cầu hệ thống và cung cấp các lệnh để cài đặt phụ thuộc, chạy bản demo và kiểm thử các chức năng chính. Nhóm phải thực hiện các hướng dẫn này trên một máy tính sạch trước khi nộp bài và hoàn thành bản ghi xác minh ở Mục 9. Không bài kiểm thử nào được đánh dấu là đạt nếu chưa có kết quả quan sát thực tế.
 
 ## 1. Yêu cầu hệ thống
 
