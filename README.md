@@ -55,7 +55,34 @@ Mở http://localhost:3000 hoặc URL/cổng được in ra trong log khởi đ�
 | L-05 | Dùng tài khoản thử nghiệm thứ hai | Không thể đọc hoặc thay đổi dữ liệu của tài khoản thứ nhất | ✅ |
 | L-06 | Khởi động lại ứng dụng và đăng nhập lại | Dữ liệu PostgreSQL vẫn còn | ✅ |
 
-
+ Hướng dẫn Test các Tính năng
+    1. Kiểm tra Sức khỏe Hệ thống (Health Check)
+    Phương thức: GET
+    
+    URL: http://localhost:3000/health
+    
+    Kết quả mong đợi: Trả về trạng thái {"status": "OK", "database": "connected"}.
+    
+    2. Test Tính năng Đăng ký Tài khoản (/register)
+    Mở một cửa sổ terminal mới và thực hiện lệnh
+    php -S localhost:8000 -t frontend
+    Truy cập http://localhost:8000 chọn Đăng ký.
+    
+    Nhập thông tin tài khoản mới và nhấn Gửi.
+    
+    Kiểm tra: Hệ thống tự mã hóa mật khẩu bằng bcryptjs và lưu vào PostgreSQL. Trả về thông báo thành công.
+    
+    3. Test Tính năng Đăng nhập (/login)
+    Nhập Username và Password vừa đăng ký.
+    
+    Kiểm tra: Hệ thống xác thực và trả về chuỗi JWT Token để duy trì phiên làm việc.
+    
+    4. Test Quản lý Task (CRUD)
+    Thêm Task: Nhập tiêu đề, nội dung công việc và hạn hoàn thành -> Bấm Thêm Task.
+    
+    Xem danh sách: Danh sách task hiển thị phân loại theo trạng thái.
+    
+    Cập nhật/Xóa Task: Đánh dấu hoàn thành hoặc nhấn Xóa để kiểm tra tính nhất quán dữ liệu trên CSDL Neon.
 ## 5. Cấu hình Neon PostgreSQL
 
 1. Mở dự án Neon của nhóm và chọn nhánh (branch) cùng cơ sở dữ liệu cho môi trường dự kiến.
