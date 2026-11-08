@@ -26,10 +26,5 @@ Cài Node.js LTS tương thích môi trường deploy và PostgreSQL. Tạo data
 
 Mặc định API và giao diện Node tĩnh chạy tại http://localhost:3000. Endpoint health trả HTTP 200 khi database hoạt động và 503 khi database chưa kết nối.
 
-Tùy chọn giao diện PHP local: chạy API bằng npm start, sau đó chạy PHP built-in server với document root frontend và đặt API_BASE trỏ tới API. Production VPS trong TV2 package hiện phục vụ giao diện public/index.html qua Node/Nginx; không cấu hình PHP nếu nhóm không chọn triển khai PHP.
+Tùy chọn giao diện PHP local: chạy API bằng npm start, sau đó chạy PHP built-in server với document root frontend và đặt API_BASE trỏ tới API. Production VPS trong TV2 package hiện phục vụ giao diện public/index.html qua Node/Nginx.
 
-## Biến môi trường
-Xem .env.example để biết tên biến. Không commit .env; production credentials phải được đặt trong secret store hoặc file server có quyền hạn chế. CORS_ORIGINS là danh sách origin được phép gọi API từ trình duyệt, phân cách bằng dấu phẩy.
-
-## Triển khai
-TV2-Deployment-Package có runbook và cấu hình mẫu cho VPS Ubuntu + Nginx + PM2 + PostgreSQL. Xác nhận entry file, domain, port, secrets và database với cả TV1/TV2 trước khi chạy. Không dùng nguyên placeholder example.com hoặc REPLACE_* trên production.
