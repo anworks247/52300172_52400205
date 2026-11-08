@@ -1,5 +1,5 @@
 # Triển khai ứng dụng web (Deployment of Web Applications)
-
+Truy cập đường dẫn website(product) tại : https://giuakiweb-quanlytask.onrender.com/
 
 ## 1. Yêu cầu hệ thống
 
@@ -60,16 +60,17 @@ Mở http://localhost:3000 hoặc URL/cổng được in ra trong log khởi đ�
     1. Kiểm tra Sức khỏe Hệ thống (Health Check)
     Phương thức: GET
     
-    URL: http://localhost:3000/health
+    URL: http://localhost:3000/health với local hoặc  
+    https://giuakiweb-quanlytask.onrender.com/api/health với global
     
     Kết quả mong đợi: Trả về trạng thái {"status": "OK", "database": "connected"}.
     
     2. Test Tính năng Đăng ký Tài khoản (/register)
-    Mở một cửa sổ terminal mới và thực hiện lệnh
+    Với máy local mở một cửa sổ terminal mới và thực hiện lệnh
     php -S localhost:8000 -t frontend
-    Truy cập http://localhost:8000 chọn Đăng ký.
-    
-    Nhập thông tin tài khoản mới và nhấn Gửi.
+    Truy cập http://localhost:8000  .
+    Với global truy cập đường dẫn https://giuakiweb-quanlytask.onrender.com/
+    Nhập đầy thông tin tài khoản mới cần đăng ký và nhấn Gửi.
     
     Kiểm tra: Hệ thống tự mã hóa mật khẩu bằng bcryptjs và lưu vào PostgreSQL. Trả về thông báo thành công.
     
