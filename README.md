@@ -56,6 +56,7 @@ Mở http://localhost:3000 hoặc URL/cổng được in ra trong log khởi đ�
 | L-06 | Khởi động lại ứng dụng và đăng nhập lại | Dữ liệu PostgreSQL vẫn còn | ✅ |
 
  Hướng dẫn Test các Tính năng
+ 
     1. Kiểm tra Sức khỏe Hệ thống (Health Check)
     Phương thức: GET
     
